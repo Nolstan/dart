@@ -25,6 +25,32 @@ void main(){
 
   
   // TODO this ( ! )motherfucker is hard to understand.
+ 
 
 
+// demostrating the cascade operatot 
+Person person = Person('deafult',0)..setName("Nolstan")..setAge(254);
+person.printInfo();
+
+}
+
+//  The CASCADE OPERATOR (..) is used to perform multiple operations on the same object.
+
+class Person {
+  String name;
+  int age;
+
+  Person(this.name, this.age);
+
+  void setName(String name){
+    this.name = name;
+  }
+
+  void setAge(int age){
+    this.age = age;
+  }
+
+  void printInfo(){
+    print("Name: $name, Age: $age");
+  }
 }

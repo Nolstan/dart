@@ -9,6 +9,9 @@ void main(){
   }finally{
     print("done executing the code");
   }
+
+
+  passingNamedParameters();
 }
 
 // The difference between try catch and Finally
@@ -36,4 +39,27 @@ return a + b + c;
 
 int multiply(int a, int b,{int c = 1, int d = 2}){ // named parameter c with default value 1
   return a * b * c;
+}
+
+
+// Namd parameters 
+
+void namedParameters({  int? a,required int? b, int? c}){ // named parameters with required parameter b
+  print("a: $a, b: $b, c: $c");
+  
+}
+
+void passingNamedParameters(){
+  // namedParameters(10, 23, 30); // this is the normal way of calling a function with positional parameters.
+
+  // Assuming that we alot of numbers positional parameters, it will be hard to remember the order of the parameters.
+  // int that case we need named parameters
+
+  namedParameters(c:30, b: 23, a: 10);
+  // named paratameters are optional by defaulf and defined using {} which means
+  // namedParameters(a: 10); will still work and the other parameters will be null.
+
+  // if you want to make a named parameter required, you can use the required keyword before the parameter name.
+  
+
 }
